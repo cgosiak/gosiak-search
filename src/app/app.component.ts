@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  query: string = null;
+
+  enter() {
+    if (this.query) {
+      window.open(`http://lmgtfy.com/?q=${this.query.split(' ').join('+')}`, '_self');
+    }
+  }
+
 }
